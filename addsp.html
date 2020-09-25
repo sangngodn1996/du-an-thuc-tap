@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- table css-->
+    <link rel="stylesheet" href="css/addsp.css">
+    <!-- fas icon -->
+    <script src="https://kit.fontawesome.com/736e87cd0d.js" crossorigin="anonymous"></script>
+    <!-- script bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body >
+
+    <div class="container border" >
+        <h2 style="text-align: center;">THÊM THÔNG TIN SẢN PHẨM</h2>
+        <!-- Button to Open the Modal -->
+        <button type="button" class="btn btn-primary fas fa-edit" data-toggle="modal" data-target="#myModal" >
+            Add new
+        </button>
+
+        <!-- The Modal -->
+        <div class="modal" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title fas fa-edit">Thêm Bài viết mới</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="tab-pane fade show active" id="capNhat" role="tabpanel"
+                            aria-labelledby="capNhat-tab">
+                            <div class="card">
+                                <div class="card-header text-uppercase font-weight-bold">
+                                    <i class="fas fa-edit"></i> Nhập thông tin bài viết
+                                </div>
+                                <div class="card-body">
+                                    <form>
+                                        <div class="row">
+                                            <div class="form-group col-6">
+                                                <label for="maSP">Mã SP</label>
+                                                <input type="text" class="form-control"   id="maSP"
+                                                    placeholder="nhập mã sản phẩm">
+                                            </div>
+                                            <div class="form-group col-6">
+                                                <label for="tenSP">Tên sản phẩm</label>
+                                                <input type="text" class="form-control"  id="tenSp"
+                                                    placeholder="nhập tên sản phẩm">
+                                            </div>
+                                        </div> <!-- row -->
+                                        <div class="row">
+
+                                        </div> <!-- row -->
+                                        <div class="row">
+                                            <div class="form-group col-6">
+                                                <label for="gia">Giá</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text">VND</span>
+                                                    </div>
+                                                    <input type="text" class="form-control" id="gia"
+                                                        placeholder="Nhập giá">
+                                                    <div class="input-group-append">
+                                                        <span class="input-group-text">0.00</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- nhap hình ảnh-->
+
+                                        </div> <!-- row -->
+                                        <div class="row">
+                                            <div class="form-group col-12">
+                                                <label for="noidung">Nội dung sản phẩm</label>
+                                                <textarea type="text" class="form-control" id="noidung"
+                                                    placeholder="Nhập nội dung của bài viết" row="3"></textarea>
+                                            </div>
+                                        </div> <!-- row -->
+                                        <div class="row">
+                                            <button class="btn btn-md btn-primary ml-3 font-weight-bold"  ng-click="save()" ng-disabled="index != -1" type="submit">
+                                                <i class="fas fa-save"></i> &nbsp; &nbsp; Save &nbsp; &nbsp;
+                                            </button>
+                                            <button class=" btn btn-md btn-danger ml-3"  ng-click="cancel()"  ng-disabled="index == -1" type="reset">
+                                                <i class="fas fa-window-close"></i> Cancel
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                              
+                            </div>
+                        </div>
+
+                        <!-- Modal footer -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- List Bai dang -->
+
+        <div class="row" style="margin-top: 20px;">
+            <article class="col-sm-12">
+                <!--m-auto-->
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header  bg-secondary text-uppercase font-weight-bold">
+                            <i class="fas fa-list "></i> Bảng Thông tin các bài đăng
+                        </div>
+                        <div class="card-body p-0">
+                            <table class="table table-bordered table-hover" id="t01">
+                                <thead class="text-center bg-warning">
+                                    <tr>
+                                        <th scope="col" class="align-middle" rowspan="2">mã SP</th>
+                                        <th scope="col" class="align-middle" rowspan="2">Tên SP</th>
+                                        <th scope="col" class="align-middle" colspan="3">Thông tin SP</th>
+                                        <th scope="col" class="align-middle" colspan="3">Action</th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col">Giá</th>
+                                        <th scope="col">Hình ảnh</th>
+                                        <th scope="col">Nội dung bài SP</th>
+                                        <th scope="col">Update</th>
+                                        <th scope="col">Delete</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat = " st in list_sanpham">
+                                        <th scope="row">S001</th>
+                                        <td>phần mềm MAL</td>
+                                        <td>5000000</td>
+                                        <td><img src="https://cdn.24h.com.vn/upload/2-2018/images/2018-04-09/1523256751-663-ngam-dan-cay-bonsai-ti-hon-dep-kiet-xuat-anh--2--1522914017-width660height440.jpg" alt=""></td>
+                                        <td>MAL là một bài viet chuyên về việc quản lý nhân viên làm việc online</td>
+                                        <td><button class="btn btn-primary" ng-click="update()" ng-disabled="index == -1" type="button">sửa</button></td>
+                                        <td><button ng-click="delete()" class="btn btn-primary" ng-disabled="index == -1" type="button">xóa</button></td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="card-footer text-muted">
+                            thông tin các sản phẩm đã được đăng
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <!-- end List bai dang -->
+
+    </div>
+
+</body>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/lib/bootstrap.min.js"></script>
+<script src="/js/popper.min.js"></script>
+</html>

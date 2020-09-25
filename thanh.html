@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <!-- Site Metas -->
+  <title>CMT - Dragon</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- Site Icons -->
+  <link rel="shortcut icon" href="#" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="#" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <!-- Pogo Slider CSS -->
+
+  <!-- Site CSS -->
+
+  <!-- Responsive CSS -->
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/custom.css" />
+  <link rel="stylesheet" href="css/addsp.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body id="home" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
+
+  <!-- Button to Open the Modal -->
+  <button type="button" class="btn btn-primary fas fa-edit" data-toggle="modal" data-target="#myModal" >
+    Add new
+</button>
+
+<!-- The Modal -->
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title fas fa-edit">Thêm Bài viết mới</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="tab-pane fade show active" id="capNhat" role="tabpanel"
+                    aria-labelledby="capNhat-tab">
+                    <div class="card">
+                        <div class="card-header text-uppercase font-weight-bold">
+                            <i class="fas fa-edit"></i> Nhập thông tin bài viết
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="row">
+                                    <div class="form-group col-6">
+                                        <label for="maSP">Mã SP</label>
+                                        <input type="text" class="form-control"   id="maSP"
+                                            placeholder="nhập mã sản phẩm">
+                                    </div>
+                                    <div class="form-group col-6">
+                                        <label for="tenSP">Tên sản phẩm</label>
+                                        <input type="text" class="form-control"  id="tenSp"
+                                            placeholder="nhập tên sản phẩm">
+                                    </div>
+                                </div> <!-- row -->
+                                <div class="row">
+
+                                </div> <!-- row -->
+                                <div class="row">
+                                    <div class="form-group col-6">
+                                        <label for="gia">Giá</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">VND</span>
+                                            </div>
+                                            <input type="text" class="form-control" id="gia"
+                                                placeholder="Nhập giá">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text">0.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- nhap hình ảnh-->
+
+                                </div> <!-- row -->
+                                <div class="row">
+                                    <div class="form-group col-12">
+                                        <label for="noidung">Nội dung sản phẩm</label>
+                                        <textarea type="text" class="form-control" id="noidung"
+                                            placeholder="Nhập nội dung của bài viết" row="3"></textarea>
+                                    </div>
+                                </div> <!-- row -->
+                                <div class="row">
+                                    <button class="btn btn-md btn-primary ml-3 font-weight-bold"  ng-click="save()" ng-disabled="index != -1" type="submit">
+                                        <i class="fas fa-save"></i> &nbsp; &nbsp; Save &nbsp; &nbsp;
+                                    </button>
+                                    <button class=" btn btn-md btn-danger ml-3"  ng-click="cancel()"  ng-disabled="index == -1" type="reset">
+                                        <i class="fas fa-window-close"></i> Cancel
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                      
+                    </div>
+                </div>
+
+                <!-- Modal footer -->
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- List Bai dang -->
+  
+
+
+
+</body>
+
+</html>

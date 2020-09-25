@@ -1,0 +1,17 @@
+.main.postlist { max-width: 820px; padding-top: 45px; }
+.main.postlist .masonry { margin-top: -5px; }
+.postlist-blog .post, .postlist-blog .page, .postlist-blog .project { border-bottom: none !important; padding-bottom: 0; margin-bottom: 30px; }
+.postlist-blog > article { margin-bottom: 17px !important; }
+.post-mb10 { margin-bottom: 0px; }
+.postlist article h2.post-headline { padding-top: 0px ;padding-bottom: 5px; font-size: 19px; line-height: 26px; margin-top: 0; }
+.masonry article h2.post-headline { padding-top: 16px; }
+.postlist article h2.post-headline a { font-weight: bold; font-size: 25px; line-height: 30px; letter-spacing: -0.02em; }
+.postlist > article p.more-detail { float: none; }
+.postlist > article blockquote { margin-top: 1px; margin-bottom: 29px !important; }
+.more-detail a { background: #70c14a; border-radius: 2px; color: #fff; display: block; padding: 0 13px; text-align: center; height: 34px; line-height: 34px; font-size: 14px; letter-spacing: 0.022em; display: inline-block; transition: all 0.3s; }
+.more-detail a:hover { background: #61b23b; color: #fff; text-decoration: none; }
+.more-detail a:active { background: #51a22b; }
+.post-right { border-bottom: 1px solid #dfdfdf; padding-bottom: 30px; float: right; width: 89%; margin-bottom: 32px; }
+.container {widows: 1200px; margin-left:0%; margin-right:30%;}
+
+

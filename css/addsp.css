@@ -1,0 +1,22 @@
+table#t01 {
+ width: 100%;
+ background-color: #f1f1c1;
+ }
+table#t01 tr:nth-child(even) {
+   background-color: rgb(131, 224, 185);
+ }
+ table#t01 tr:nth-child(odd) {
+ background-color: rgb(108, 238, 147);
+ }
+ table#t01 th {
+ color: black;
+ background-color: gold;
+ }
+
+ td {
+     text-align: center;
+ }
+ td > img{
+    width: 60px;
+    height: 60px;
+    }
